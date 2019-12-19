@@ -61,14 +61,14 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
-nav {
+.nav-list, .nav-item, .nav-item1 {
 	display: flex;
 	justify-content: space-between;
 	
 }
 
- nav a {
-	 color: gray;
+ .nav-item a {
+	 color: #ccc;
 	 text-decoration: none;
 	 font-weight: bold;
  } 
@@ -223,3 +223,83 @@ ul {
 	justify-content: center;
 	margin: 2% 0;
 }
+
+@media (max-width:500px) {
+     .nav-list {
+         display: flex;
+         /* display: -webkit-flex; */
+         flex-direction: column;
+         /* -webkit-flex-direction: column; */
+         align-items: center;
+         justify-content: center;
+         
+     }
+     .nav-item, .nav-item1 {
+         font-size: 24px;
+         padding: 5px;
+         margin: 10px;
+         border-bottom: 1px solid black;
+         width: 50%;
+         justify-content: center;
+
+        
+     }
+     .nav-item {
+         order: 1;
+
+    
+     }
+}
+
+@media (max-width: 500px){
+ .hero-right img {
+        display: none; 
+    }
+    .hero-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       position: static;
+       margin: 0 auto;
+    
+    }
+    hr{
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px){
+    .words-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px){
+    .picture img {
+        width: 400px;
+        height: auto;
+    }
+    .words-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 75%;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+    }
+    .copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+
