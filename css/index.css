@@ -61,29 +61,41 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
-.nav-list, .nav-item, .nav-item1 {
+header {
+    display: flex;
+
+}
+nav {
 	display: flex;
-	justify-content: space-between;
-	
+width: 100%;
+justify-content: space-around;
 }
 
- .nav-item a {
+
+ .nav-bar a {
 	 color: #ccc;
 	 text-decoration: none;
-	 font-weight: bold;
+     font-weight: bold;
+     width: 80%;
+     margin: 10px;
  } 
 
 .hero {
 	display: flex;
-	justify-content: space-around;
-	padding: 10%;
+    padding: 10%; 
 }
 
+.hero-left {
+   display: flex;
+   flex-direction: column;
+   margin-right: 5%;
+}
 
 h2 {
 	display: flex;
 	font-size: 74px;
-	justify-content: space-around;
+    justify-content: space-around;
+    text-align: center;
 }
 
 .button {
@@ -92,7 +104,7 @@ h2 {
 	background: white;
 	border: 2px solid black;
 	justify-content: space-around;
-	padding: 5%;
+	
 }
 .button:hover {
 	background: rgb(15, 146, 185);
@@ -149,11 +161,7 @@ opcaity: 0.5;
 
 }
 
-.headerimage {
-	display: flex;
-	justify-content: center;
-	
-}
+
 
 .services-header-img {
 width: 100%;
@@ -191,9 +199,8 @@ button {
 	background: white;
 	font-size: 12px;
 	border-radius: 8px;
-	margin-right: 90px;
 	margin-top: 6%;
-	padding: 2% 3% 2% 3%;
+    padding: 2% 3% 2% 3%;
 }
 
 div p {
@@ -224,69 +231,117 @@ ul {
 	margin: 2% 0;
 }
 
-@media (max-width:500px) {
-     .nav-list {
+@media (max-width: 800px){
+    .site-container {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .logo img {
+        margin: auto;
+        display: inline-block;
+        width: 50%;
+    }
+
+header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+    .nav-bar {
+    width: 100%;
+     align-items: center;
+    }
+
+    hr {
+        font-size: 2rem;
+    }
+    .hero {
+        display: inline;
+    }
+    .hero-left {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    }
+    h2 {
+        text-align: center;
+        
+    }
+    .hero-right img {
+        display: none; 
+    }
+    .picture img {
+        width: 700px;
+        height: auto;
+    }
+    .words-bottom {
+        width: 95%;
+    }
+}
+
+@media (max-width:500px){
+    .site-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+h2 {
+    font-size: 2.5rem;
+}
+
+     .nav-bar {
          display: flex;
-         /* display: -webkit-flex; */
          flex-direction: column;
-         /* -webkit-flex-direction: column; */
-         align-items: center;
-         justify-content: center;
          
      }
-     .nav-item, .nav-item1 {
-         font-size: 24px;
+     .nav-bar a {
+         font-size: 1.5rem;
          padding: 5px;
          margin: 10px;
          border-bottom: 1px solid black;
-         width: 50%;
-         justify-content: center;
-
-        
+         width: 80%;
+         text-align: center;
      }
-     .nav-item {
-         order: 1;
+    .nav-bar :nth-child(7) {
+    order: -1;  
+    }
 
-    
-     }
-}
-
-@media (max-width: 500px){
- .hero-right img {
+    .hero-right img {
         display: none; 
     }
-    .hero-left {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-       position: static;
-       margin: 0 auto;
-    
-    }
+  
     hr{
         width: 50%;
     }
-}
 
-@media (max-width: 500px){
     .words-top {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
-}
 
-@media (max-width: 500px){
     .picture img {
-        width: 400px;
+        width: 100%;
         height: auto;
     }
     .words-bottom {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 75%;
+        width: 100%;
+       
     }
+    .words-top article {
+    width: 80%;
+    font-size: .8rem;
+    }
+.words-bottom article {
+    width: 80%;
+    font-size: .8rem;
+}
+
     footer {
         display: flex;
         flex-direction: column;
@@ -298,7 +353,9 @@ ul {
         justify-content: center;
         align-items: center;
     }
+
 }
+
 
 
 
