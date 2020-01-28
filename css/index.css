@@ -1,3 +1,362 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+
+
+ html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+header {
+    display: flex;
+
+}
+nav {
+	display: flex;
+width: 100%;
+justify-content: space-around;
+}
+
+
+ .nav-bar a {
+	 color: #ccc;
+	 text-decoration: none;
+     font-weight: bold;
+     width: 80%;
+     margin: 10px;
+ } 
+
+.hero {
+	display: flex;
+    padding: 10%; 
+}
+
+.hero-left {
+   display: flex;
+   flex-direction: column;
+   margin-right: 5%;
+}
+
+h2 {
+	display: flex;
+	font-size: 74px;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.button {
+	display: flex;
+	font-size: 20px;
+	background: white;
+	border: 2px solid black;
+	justify-content: space-around;
+	
+}
+.button:hover {
+	background: rgb(15, 146, 185);
+}
+ .words-top {
+	 display: flex;
+ }
+
+.words-top article {
+	width: 50%;
+	font-size: 20px;
+}
+.middle-img {
+	width: 100%
+}
+.picture {
+	display: flex;
+	justify-content: center;
+	
+}
+
+
+
+.words-bottom {
+	display: flex;
+	font-size: 18px;
+	
+	
+}
+
+
+.words-top article {
+	padding: 3% 0;
+
+}
+
+.words-bottom article {
+	width: 33%;
+	padding: 3% 0;
+}
+
+h6 {
+	text-align: center;
+}
+
+.site-container {
+	width: 800px;
+	margin: 0 auto;
+}
+hr {
+
+background-color: black;
+opcaity: 0.5;
+
+}
+
+
+
+.services-header-img {
+width: 100%;
+}
+
+h1 {
+	font-size: 25px;
+	padding-top: 2%;	
+}
+
+.services {
+	
+	padding-top: 1%;
+	font-size: 20px;
+}
+
+
+.rows-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0 0 3% 0;
+}
+
+.boxes {
+	width: 46%;
+	background: #f4f3f4;
+	border: 1px solid black;
+	padding: 25px 50px 15px 15px;
+	font-weight: bold;
+	margin-top: 2%;
+}
+
+button {
+	background: white;
+	font-size: 12px;
+	border-radius: 8px;
+	margin-top: 6%;
+    padding: 2% 3% 2% 3%;
+}
+
+div p {
+	font-weight: bold;
+}
+
+ul {
+	list-style: square inside;
+	font-weight: bold;
+}
+
+ul {
+	margin-top: 15px;
+}
+
+.bottomservices {
+	display: flex;
+}
+
+.bottomleft, .bottomright {
+	width: 50%;
+}
+
+.copyright {
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	margin: 2% 0;
+}
+
+@media (max-width: 800px){
+    .site-container {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .logo img {
+        margin: auto;
+        display: inline-block;
+        width: 50%;
+    }
+
+header {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+    .nav-bar {
+    width: 100%;
+     align-items: center;
+    }
+
+    hr {
+        font-size: 2rem;
+    }
+    .hero {
+        display: inline;
+    }
+    .hero-left {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    }
+    h2 {
+        text-align: center;
+        
+    }
+    .hero-right img {
+        display: none; 
+    }
+    .picture img {
+        width: 700px;
+        height: auto;
+    }
+    .words-bottom {
+        width: 95%;
+    }
+}
+
+@media (max-width:500px){
+    .site-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+h2 {
+    font-size: 2.5rem;
+}
+
+     .nav-bar {
+         display: flex;
+         flex-direction: column;
+         
+     }
+     .nav-bar a {
+         font-size: 1.5rem;
+         padding: 5px;
+         margin: 10px;
+         border-bottom: 1px solid black;
+         width: 80%;
+         text-align: center;
+     }
+    .nav-bar :nth-child(7) {
+    order: -1;  
+    }
+
+    .hero-right img {
+        display: none; 
+    }
+  
+    hr{
+        width: 50%;
+    }
+
+    .words-top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .picture img {
+        width: 100%;
+        height: auto;
+    }
+    .words-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+       
+    }
+    .words-top article {
+    width: 80%;
+    font-size: .8rem;
+    }
+.words-bottom article {
+    width: 80%;
+    font-size: .8rem;
+}
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+    }
+    .copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}
+
+
+
 
 
